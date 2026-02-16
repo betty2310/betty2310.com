@@ -1,9 +1,9 @@
 export const SITE = {
   website: "https://betty2310.com/", // replace this with your deployed domain
-  author: "betty2310",
+  author: "betty",
   profile: "https://betty2310.com/about/",
   desc: "Dương Hữu Huynh homepage. Focus about Tech, Development, research",
-  title: "betty2310's home",
+  title: "Betty's home",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
