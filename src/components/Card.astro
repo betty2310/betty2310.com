@@ -25,7 +25,9 @@ const { title, description, ...props } = data;
     <Heading
       style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
     >
-      {title}
+      <p class="font-heading">
+        {title}
+      </p>
     </Heading>
   </a>
   <Datetime {...props} />
