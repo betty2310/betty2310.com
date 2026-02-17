@@ -3,35 +3,19 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Yo! Mình là **Huynh**, đầy đủ là _Dương Hữu Huynh_. Rất vui vì bạn tìm thấy góc nhỏ này của mình trong khoảng 1,3 tỷ website trên internet[^1].
 
-![Astro Paper](public/astropaper-og.jpg)
+Không biết mình nên giới thiệu gì hơn nữa. Mình trong mảng Công nghệ thông tin, mình thích mọi thứ liên quan đến build product (dù chưa giỏi lắm), từ ý tưởng (mình có cả list dài hơn cái sớ), kiến thức Backend, Frontend, DevOps,.... thậm chí 1 chút content bẩn đề marketing nữa.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+Mình đang làm việc tại [trường CNTT & TT, Đại học Bách Khoa Hà Nội](https://soict.hust.edu.vn), vị trí Lecture in training, nôm na là trợ giảng, và trường sẽ đào tạo dần để thành giảng viên chính thức (một ngày không xa nào đó).
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+Hiện tại mình đang giảng dạy các môn thực hành như Tin học đại cương, Mạng máy tính, Thiết kế & triển khai mạng IP.
 
-## Features
+Mình cũng là thành viên của trung tâm [**Navis**](https://navistar.dev/), tại đây mình vừa là Researcher (chưa có kết quả gì[^2] ㅠ﹏ㅠ), vừa là Engineer, build product ra tiền thật.
+Công việc hiện tại thỏa mãn cả đam mê giảng dạy và tạo ra sản phẩm có ích của mình.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+Bạn có thể tìm thấy mình trên Github, username là [@betty2310](https://github.com/betty2310). Mình cũng trên [X](https://twitter.com/@_betty2310), [Facebook](https://www.facebook.com/betty2310), hoặc [Email cho mình](mailto:betty2310@duck.com).
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+[^1]: https://www.hostinger.com/tutorials/how-many-websites-are-there
 
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+[^2]: sẽ khác trong năm 2026 nhé
