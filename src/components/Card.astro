@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
+import { SITE } from "@/config";
 import Datetime from "./Datetime.astro";
 
 type Props = {
@@ -10,26 +11,51 @@ type Props = {
 
 const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 
-const { title, description, ...props } = data;
+const { title, description, ogImage: initOgImage, ...props } = data;
+
+let ogImageUrl: string | undefined;
+if (typeof initOgImage === "string") {
+  ogImageUrl = initOgImage;
+} else if (initOgImage?.src) {
+  ogImageUrl = initOgImage.src;
+}
+if (!ogImageUrl && SITE.dynamicOgImage) {
+  ogImageUrl = `${getPath(id, filePath)}/index.png`;
+}
 ---
 
 <li class="my-6">
   <a
     href={getPath(id, filePath)}
     class:list={[
-      "inline-block text-lg font-medium text-accent",
+      "group flex items-center gap-4",
+      "text-lg font-medium text-accent",
       "decoration-dashed underline-offset-4 hover:underline",
       "focus-visible:no-underline focus-visible:underline-offset-0",
     ]}
   >
-    <Heading
-      style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
-    >
-      <p class="font-heading text-xl font-bold">
-        {title}
-      </p>
-    </Heading>
+    <div class="flex-1">
+      <Heading
+        style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
+      >
+        <p class="font-heading text-xl font-bold">
+          {title}
+        </p>
+      </Heading>
+      <Datetime {...props} />
+      <p class="text-base font-normal text-foreground">{description}</p>
+    </div>
+    {
+      ogImageUrl && (
+        <img
+          src={ogImageUrl}
+          alt={title}
+          style={{
+            viewTransitionName: `og-${slugifyStr(title.replaceAll(".", "-"))}`,
+          }}
+          class="hidden h-24 w-36 shrink-0 rounded-md object-cover transition-transform duration-300 group-hover:scale-105 sm:block"
+        />
+      )
+    }
   </a>
-  <Datetime {...props} />
-  <p>{description}</p>
 </li>

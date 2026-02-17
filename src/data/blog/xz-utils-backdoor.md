@@ -10,11 +10,9 @@ tags:
   - doc
   - story
   - security
-ogImage: ../../assets/images/xz.jpg
+ogImage: ../../assets/images/xz-util-cover.png
 description: Lỗ hổng backdoor trong thư viện xz-utils hay gaslighting kiểu developer
 ---
-
-![xz-utils-backdoor](../../assets/images/xz.jpg)
 
 Gần đây tôi xem 1 bộ K-Drama là [Queen of Tears](https://www.netflix.com/vn/title/81707950). Phản diện
 phim, từng bước từng bước lấy lòng tin của nhà tài phiệt, rồi lật mặt chơi xấu, kết cấu với gian
@@ -33,6 +31,8 @@ Vào 1 ngày đẹp trời tháng 6 năm 2022, 1 thanh niên với account JiaT7
 JiaT75 hoạt động tích cực, đóng góp nhiều hơn cho XZ, và ngày càng được Collin tin tưởng, cộng hưởng với vấn đề tiến độ kia, Collin dần cho JiaT75 nhiều quyền hơn vào quá trình phát triển project. Bên cạnh việc đóng góp, phát triển, sửa lỗi như 1 maintainer có tâm, JiaT75 bắt đầu thực hiện những dòng code tư lợi cho riêng mình.
 JiaT75 đương nhiên là tài khoản ẩn danh, chả ai biết mặt ngang mũi dọc anh ta như nào, nhưng mà quả kế hoạch scam lâu dài này thì chắc cũng mặt quắt tai dơi như anh Quyết. Tháng 3 năm 2024, anh ta update 2 file, những thông tin cuối cùng để tiêm mã độc vào XZ. XZ phiên bản 5.6.1 được phát hành.
 1 cách ảo ma canada lazada malaysia nobita làm nhoè đi mascara của shizuka, JiaT75 có thể che giấu những mã độc trong 1 project mà được public cho cả ngàn developer khác ngâm cứu và sử dụng mỗi ngày. Nói về mã độc này thì, hiểu đơn giản là nó cho phép hacker truy cập 1 cách trái phép vào những server chạy hệ điều hành Linux đã tải Xz version 5.6.1. Giống như mở khoá trái tim crush mà chả cần tốn time tán tỉnh hay tiền quà, vì đi đường tắt thế nên gọi là backdoor. Nó cũng được chấm 10/10 trên thang điểm về lỗ hổng bảo mật CVSS score.
+
+![xz-utils-backdoor](../../assets/images/xz.jpg)
 
 Nếu chuyện này mà xảy ra thật, thì ảnh hưởng của nó sẽ rất nghiêm trọng, thử tưởng tượng server của Google hay Facebook bị anh ta truy cập xem, anh ta có thể khiến Jisoo hay Rosé follow account của tôi. Thông tin mật có thể bị đọc trộm, thay thế, giả mạo. Thời đại thông tin này có thể khiến WW3 xảy ra không chừng.
 Kịch bản ấy đẹp, mỗi tội nó không xảy ra. Cách JiaT75 tạo ra lỗ hổng ảo diệu như nào thì cách lỗ hổng được phát hiện cũng ảo như vậy. Ngày 29 tháng 3, Andres Freund - 1 lập trình viên của Microsoft, sau khi truy cập vào server của mình đã nhận thấy thời gian truy cập chậm đi 0.5s so với bình thường (bình thường là 0.3s, nhưng sau khi update version mới là 0.8s). Clm 0.5s, nhanh như tôi rep tin nhắn crush. Và Freund cũng để ý, anh thử xem tiến trình nào làm tốn thời gian hơn thì nhận thấy Xz, vốn chỉ để giải nén file, giờ có khi nó giải nén ra vài con virus, worm, malware,... và chúng nó đang party trên tài nguyên CPU. Thế là lỗ hổng này được phát hiện. Freund lập tức gửi mail cho 1 tổ chức bảo mật để thông báo về lỗ hổng này.
